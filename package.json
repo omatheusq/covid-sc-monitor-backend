@@ -1,0 +1,20 @@
+{
+  "name": "covid-sc-monitor-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js --ignore './data/'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "gunzip-file": "^0.1.1",
+    "https": "^1.0.0",
+    "nodemon": "^2.0.4"
+  }
+}
