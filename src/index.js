@@ -4,9 +4,10 @@ const routes = require('./routes')
 
 //require('./case-downloader')
 
-
 const app = express();
-app.use(cors())
+app.use(cors({
+  origin: 'http://example.com'
+}))
 app.use(express.json())
 
 app.use(routes)
