@@ -5,9 +5,19 @@ const routes = require('./routes')
 //require('./case-downloader')
 
 const app = express();
-app.use(cors({
-  origin: 'http://example.com'
-}))
+
+var whitelist = ['https://matheusquadros.github.io', 'https://matheusquadros.github.io/covid-sc-monitor/']
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
+app.use(cors(corsOptions))
 app.use(express.json())
 
 app.use(routes)
