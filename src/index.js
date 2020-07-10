@@ -6,7 +6,7 @@ const routes = require('./routes')
 
 const app = express();
 
-var whitelist = ['https://matheusquadros.github.io', 'https://matheusquadros.github.io/covid-sc-monitor/']
+var whitelist = ['https://matheusquadros.github.io']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
