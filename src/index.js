@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors')
 const routes = require('./routes')
 
-require('./case-downloader')
+//require('./case-downloader')
 
 const app = express();
 
