@@ -17,7 +17,8 @@ let getCases = () => {
       newDeaths: c.new_deaths,
       caseCount: c.last_available_confirmed,
       deathCount: c.last_available_deaths,
-      isLastReport: c.is_last == 'True'
+      isLastReport: c.is_last == 'True',
+      confirmedPer100k: c.last_available_confirmed_per_100k_inhabitants
     }
   ))
 
